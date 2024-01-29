@@ -20,8 +20,6 @@ The database schema consists of several tables designed to organize and store in
 - `manufacturers`: Details about part manufacturers.
 - `categories`: Categorization of parts.
 - `locations`: Information about where parts are stored.
-- `inventory`: Tracking of available inventory.
-- ...
 
 You can find the SQL scripts to create these tables and relationships in the project's SQL folder.
 
@@ -33,7 +31,6 @@ To ensure data quality and integrity, the project incorporates various constrain
 - Foreign keys to establish relationships between tables.
 - Check constraints to validate data within defined boundaries.
 - Default values to ensure consistency.
-- ...
 
 ## Usage
 
