@@ -45,3 +45,34 @@ add primary key (id);
 
 alter table reorder_options
 add foreign key (part_id) references parts(id);
+
+-- Task 10
+alter table locations
+add check (qty > 0);
+
+-- Task 11
+alter table locations
+add primary key (part_id, location);
+
+-- Task 12
+delete from locations
+where part_id = 54;
+
+alter table locations
+add foreign key (part_id) references parts(id);
+
+-- Task 13
+alter table parts
+add foreign key (manufacturer_id) references manufacturers(id);
+
+-- Task 14
+insert into manufacturers values(11,'Pip-NNC Industrial');
+
+-- Task 15
+update parts
+set manufacturer_id = 11
+where manufacturer_id in (1,2);
+
+SELECT constraint_name, table_name, column_name
+from information_schema.key_column_usage
+where table_name = 'manufacturers';
